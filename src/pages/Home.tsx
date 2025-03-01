@@ -448,49 +448,49 @@ const trackingFeatures = [
   {
     title: "Smart Tracking",
     description: "Know where they're at, no matter the distance.",
-    image: "/assets/Smart Tracking.jpg",
+    image: "/assets/Smart Tracking.png",
     icon: <Navigation className="h-6 w-6" />
   },
   {
     title: "SOS Mode",
     description: "Location-aware 911 emergency dispatch.",
-    image: "/assets/SOS Mode Button-p-500.jpg",
+    image: "/assets/SOS Mode Button-p-500.png",
     icon: <AlertTriangle className="h-6 w-6" />
   },
   {
     title: "Live Mode",
     description: "Real-time, turn-by-turn tracking. On-demand.",
-    image: "/assets/livemode.jpg",
+    image: "/assets/livemode.png",
     icon: <MapPin className="h-6 w-6" />
   },
   {
     title: "Trusted Places",
     description: "Get notified when they come or go from anywhere.",
-    image: "/assets/Notification-Photoroom.jpg",
+    image: "/assets/Notification-Photoroom.png",
     icon: <Shield className="h-6 w-6" />
   },
   {
     title: "Heart Rate",
     description: "Track real-time heart rate effortlessly.",
-    image: "/assets/heart rate.jpg",
+    image: "/assets/heart rate.jpeg",
     icon: <HeartPulse className="h-6 w-6" />
   },
   {
     title: "SPO2",
     description: "Monitor your blood oxygen levels anytime.",
-    image: "/assets/Spo2.jpg",
+    image: "/assets/Spo2.jpeg",
     icon: <Droplet className="h-6 w-6" />
   },
   {
     title: "Stress",
     description: "Track stress level for better mental health.",
-    image: "/assets/Stress.jpg",
+    image: "/assets/Stress.jpeg",
     icon: <Brain className="h-6 w-6" />
   },
   {
     title: "Steps",
     description: "Easily track daily calories burned.",
-    image: "/assets/Steps.jpg",
+    image: "/assets/Steps.jpeg",
     icon: <Flame className="h-6 w-6" />
   }
   
@@ -520,23 +520,23 @@ const showcaseFeatures = [
   {
     title: "Custom Templates",
     description: "Ready-to-use templates for every tracking scenario",
-    image: "/assets/custom temp.jpg"
+    image: "/assets/custom temp.png"
   },
   {
     title: "Audio Import",
     description: "Import and analyze audio for enhanced safety monitoring",
-    image: "/assets/import audio.jpg"
+    image: "/assets/import audio.png"
   },
   {
     title: "Smart Audio Trimming",
     description: "AI-powered audio editing for quick and easy sharing",
     
-    image: "/assets/smart audio trim.jpg"
+    image: "/assets/smart audio trim.png"
   },
   {
     title: "Cloud Storage",
     description: "Unlimited secure cloud storage for your data",
-    image: "/assets/cloud storage.jpg"
+    image: "/assets/cloud storage.png"
   }
 ];
 
@@ -564,21 +564,21 @@ const productivityFeatures = [
     title: "One-Press Record",
     subtitle: "Press, record, recall, on the go",
     description: "Instantly capture important moments with a single touch. Our advanced recording system ensures you never miss critical safety information.",
-    image: "/assets/oneclick.jpg",
+    image: "/assets/oneclick.png",
     icon: <Mic className="h-6 w-6" />
   },
   {
     title: "Voice-to-Text Transcription",
     subtitle: "Free 300 mins/month",
     description: "Advanced AI-powered transcription converts your voice recordings into accurate text in real-time, supporting multiple languages.",
-    image: "/assets/voicetotext.jpg",
+    image: "/assets/voicetotext.png",
     icon: <FileText className="h-6 w-6" />
   },
   {
     title: "AI Summarization",
     subtitle: "Developed on Best LLMs",
     description: "Get instant, intelligent summaries of your recordings and transcripts, powered by state-of-the-art language models.",
-    image: "/assets/summary.jpg",
+    image: "/assets/summary.png",
     icon: <Bot className="h-6 w-6" />
   }
 ];
