@@ -74,13 +74,11 @@
         z-index: 9999;
       }
 
-      .loader {
-        width: 60px;
-        height: 60px;
-        border: 6px solid #007bff;
-        border-top: 6px solid transparent;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
+      /* Spinning Logo Animation */
+      .logo-spinner {
+        width: 100px; /* Adjust size as needed */
+        height: 100px;
+        animation: spin 1.5s linear infinite;
       }
 
       @keyframes spin {
@@ -88,7 +86,7 @@
         100% { transform: rotate(360deg); }
       }
 
-      /* Hide the preloader after loading */
+      /* Hide preloader after loading */
       body.loaded #preloader {
         opacity: 0;
         visibility: hidden;
@@ -100,12 +98,12 @@
   <body>
     <!-- Preloader -->
     <div id="preloader">
-      <div class="loader"></div>
+      <img src="/assets/favlogo.png" alt="Trackleo Logo" class="logo-spinner" />
     </div>
 
     <!-- Main App -->
     <div id="root"></div>
-    
+
     <script type="module" src="/src/main.tsx"></script>
 
     <!-- Hide preloader after page load -->
