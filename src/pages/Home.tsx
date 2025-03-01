@@ -525,7 +525,7 @@ const showcaseFeatures = [
   {
     title: "Audio Import",
     description: "Import and analyze audio for enhanced safety monitoring",
-    image: "/assets/import audio.png"
+    image: "/assets/import audio.jpg"
   },
   {
     title: "Smart Audio Trimming",
