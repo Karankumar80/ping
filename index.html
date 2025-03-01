@@ -27,7 +27,9 @@
     <meta name="twitter:title" content="Trackleo | AI-Powered Safety & Health Monitoring" />
     <meta name="twitter:description" content="Smart tracking for safety, health, and real-time protection." />
     <meta name="twitter:image" content="/assets/favlogo.png" />
-<meta name="google-site-verification" content="37yIMO3yrZ49qgrt_dqQk1MELFvDp-0XENRMfgwXs9Q" />
+
+    <meta name="google-site-verification" content="37yIMO3yrZ49qgrt_dqQk1MELFvDp-0XENRMfgwXs9Q" />
+
     <!-- Schema.org for Google Rich Results -->
     <script type="application/ld+json">
     {
@@ -49,19 +51,68 @@
       }
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H36QZH44VD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-H36QZH44VD');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H36QZH44VD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H36QZH44VD');
+    </script>
+
+    <style>
+      /* Preloader Styles */
+      #preloader {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .loader {
+        width: 60px;
+        height: 60px;
+        border: 6px solid #007bff;
+        border-top: 6px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Hide the preloader after loading */
+      body.loaded #preloader {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Main App -->
     <div id="root"></div>
+    
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Hide preloader after page load -->
+    <script>
+      window.onload = function() {
+        document.body.classList.add('loaded');
+      };
+    </script>
   </body>
 </html>
