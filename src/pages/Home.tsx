@@ -544,7 +544,40 @@ const showcaseFeatures = [
     image: "/assets/cloud storage.png"
   }
 ];
-
+const supporterLogos = [
+  {
+    name: "Google",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+  },
+  {
+    name: "Microsoft",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png"
+  },
+  {
+    name: "Amazon",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png"
+  },
+  {
+    name: "Apple",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png"
+  },
+  {
+    name: "Samsung",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1200px-Samsung_Logo.svg.png"
+  },
+  {
+    name: "IBM",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png"
+  },
+  {
+    name: "Intel",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/1200px-Intel-logo.svg.png"
+  },
+  {
+    name: "Cisco",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png"
+  }
+];
 const integrations = [
   {
     icon: <Cloud className="h-6 w-6 text-blue-600" />,
