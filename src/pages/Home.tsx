@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LogoSlider from '../components/LogoSlider';
 import { 
   ArrowRight, 
   Shield, 
@@ -347,7 +348,11 @@ const Home = () => {
          
         </div>
       </section>
-
+       {/* Our Supporters Section */}
+        <LogoSlider 
+          title="Our Trusted Partners" 
+          logos={supporterLogos} 
+        />
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
