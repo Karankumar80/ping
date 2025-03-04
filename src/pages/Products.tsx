@@ -1,28 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 
 const Products = () => {
-   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const handlePreOrder = (product: any) => {
-    // Navigate to checkout with product data
     navigate('/checkout', { state: { product } });
   };
+
+  const products = [
+    {
+      name: "Trackleo Essential",
+      price: 7999,
+      category: "Personal",
+      image: "/assets/champ.png",
+      description: "Perfect for individual use with essential tracking features.",
+      features: [
+        "Real-time GPS tracking",
+        "SOS button",
+        "24/7 monitoring",
+        "Mobile app access"
+      ]
+    },
+    {
+      name: "Trackleo Pro",
+      price: 10999,
+      category: "Professional",
+      image: "/assets/pro.png",
+      description: "Advanced features for professional use and enhanced safety.",
+      features: [
+        "All Essential features",
+        "Health monitoring",
+        "Fall detection",
+        "Two-way communication"
+      ]
+    }
+  ];
+
+  const comparisonFeatures = [
+    {
+      name: "Real-time GPS",
+      availability: [true, true]
+    },
+    {
+      name: "Health Monitoring",
+      availability: [false, true]
+    },
+    {
+      name: "Fall Detection",
+      availability: [false, true]
+    },
+    {
+      name: "Two-way Communication",
+      availability: [false, true]
+    }
+  ];
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
       <section className="section-padding pb-8">
-        <div className="container-width">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-              Choose Your Perfect Trackleo Device
-            </h1>
-            <p className="text-xl text-gray-600">
-              Advanced tracking solutions designed for every need, from personal safety to family protection.
-            </p>
-          </div>
+        <div className="container-width text-center max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+            Choose Your Perfect Trackleo Device
+          </h1>
+          <p className="text-xl text-gray-600">
+            Advanced tracking solutions designed for every need, from personal safety to family protection.
+          </p>
         </div>
       </section>
 
@@ -30,17 +76,19 @@ const Products = () => {
       <section className="section-padding">
         <div className="container-width grid grid-cols-1 md:grid-cols-2 gap-8">
           {products.map((product, index) => (
-            <div key={index} className="glass-card flex flex-col md:flex-row rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+            <div 
+              key={index} 
+              className="glass-card flex flex-col md:flex-row rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
+            >
               <img 
-                src={product.image} 
+                src={product.image || "/assets/placeholder.png"} 
                 alt={product.name}
                 className="w-full md:w-48 aspect-square object-cover rounded-t-xl md:rounded-l-xl md:rounded-t-none"
-                
               />
               <div className="p-5 flex-1">
                 <div className="flex justify-between items-center mb-3">
                   <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
-                  <span className="glass-effect px-3 py-1 rounded-full text-sm text-blue-600">
+                  <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
                     {product.category}
                   </span>
                 </div>
@@ -57,8 +105,9 @@ const Products = () => {
                   ))}
                 </ul>
                 <button 
-                   className="btn btn-primary w-full hover:bg-blue-700 transition text-sm py-2 flex justify-center items-center"
-                   onClick={() => handlePreOrder(product)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white w-full transition text-sm py-2 flex justify-center items-center rounded-md"
+                  onClick={() => handlePreOrder(product)}
+                  aria-label={`Pre-order ${product.name}`}
                 >
                   Pre-order Now
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -108,53 +157,5 @@ const Products = () => {
     </div>
   );
 };
-
-const products = [
-  {
-    name: "Trackleo Essential",
-    price: 7999,
-    category: "Personal",
-    image: "/assets/champ.png",
-    description: "Perfect for individual use with essential tracking features.",
-    features: [
-      "Real-time GPS tracking",
-      "SOS button",
-      "24/7 monitoring",
-      "Mobile app access"
-    ]
-  },
-  {
-    name: "Trackleo Pro",
-    price: 10999,
-    category: "Professional",
-    image: "/assets/pro.png",
-    description: "Advanced features for professional use and enhanced safety.",
-    features: [
-      "All Essential features",
-      "Health monitoring",
-      "Fall detection",
-      "Two-way communication"
-    ]
-  }
-];
-
-const comparisonFeatures = [
-  {
-    name: "Real-time GPS",
-    availability: [true, true]
-  },
-  {
-    name: "Health Monitoring",
-    availability: [false, true]
-  },
-  {
-    name: "Fall Detection",
-    availability: [false, true]
-  },
-  {
-    name: "Two-way Communication",
-    availability: [false, true]
-  }
-];
 
 export default Products;
