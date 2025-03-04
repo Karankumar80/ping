@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 
 const Products = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handlePreOrder = (product: any) => {
+    // Navigate to checkout with product data
+    navigate('/checkout', { state: { product } });
+  };
   return (
     <div className="pt-16">
       {/* Hero Section */}
