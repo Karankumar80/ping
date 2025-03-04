@@ -23,25 +23,20 @@ const LogoSlider: React.FC<LogoSliderProps> = ({ title, logos }) => {
         {/* Infinite Scrolling Wrapper */}
         <div className="relative w-full overflow-hidden py-4">
           {/* Animated Logo Slider */}
-          <div className="marquee-container">
-            {[...logos, { name: "spacer", url: "" }, ...logos].map((logo, index) => (
-              <div
-                key={index}
-                className="logo-item flex-shrink-0 h-20 w-40 flex items-center justify-center rounded-xl px-4 shadow-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300"
-                style={{
-                  background: `linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4))`,
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                {logo.url && (
-                  <img
-                    src={logo.url}
-                    alt={logo.name}
-                    className="max-h-12 max-w-full object-contain transition-all duration-300 hover:scale-110"
-                  />
-                )}
-              </div>
-            ))}
+          <div className="marquee">
+            <div className="marquee-content">
+              {logos.map((logo, index) => (
+                <div key={index} className="logo-item">
+                  <img src={logo.url} alt={logo.name} className="logo-image" />
+                </div>
+              ))}
+              {/* Duplicate for smooth looping */}
+              {logos.map((logo, index) => (
+                <div key={`dup-${index}`} className="logo-item">
+                  <img src={logo.url} alt={logo.name} className="logo-image" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -54,12 +49,19 @@ const LogoSlider: React.FC<LogoSliderProps> = ({ title, logos }) => {
             to { transform: translateX(-50%); }
           }
 
-          .marquee-container {
+          .marquee {
             display: flex;
-            animation: marquee 20s linear infinite;
-            will-change: transform;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+          }
+
+          .marquee-content {
+            display: flex;
+            animation: marquee 15s linear infinite;
             min-width: 200%;
-            gap: 2rem; /* Space between logos */
+            align-items: center;
+            gap: 3rem; /* Ensures proper spacing */
           }
 
           .logo-item {
@@ -70,11 +72,20 @@ const LogoSlider: React.FC<LogoSliderProps> = ({ title, logos }) => {
             align-items: center;
             justify-content: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+            padding: 10px;
             transition: transform 0.3s ease-in-out;
           }
 
           .logo-item:hover {
             transform: scale(1.1);
+          }
+
+          .logo-image {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
           }
         `}
       </style>
