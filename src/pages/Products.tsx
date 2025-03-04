@@ -7,7 +7,7 @@ const Products = () => {
   const navigate = useNavigate();
 
   const handlePreOrder = (product: any) => {
-    navigate('/checkout', { state: { product } });
+    navigate('/Checkout', { state: { product } });
   };
 
   const products = [
