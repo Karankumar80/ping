@@ -573,10 +573,7 @@ const supporterLogos = [
     name: "Intel",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/1200px-Intel-logo.svg.png"
   },
-  {
-    name: "Cisco",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png"
-  }
+ 
 ];
 const integrations = [
   {
