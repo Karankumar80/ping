@@ -21,54 +21,27 @@ const LogoSlider: React.FC<LogoSliderProps> = ({ title, logos }) => {
         </div>
 
         {/* Infinite Scrolling Wrapper */}
-        <div className="relative overflow-hidden py-4">
-          {/* Colorful background elements */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-500 rounded-full filter blur-xl"></div>
-            <div className="absolute bottom-0 left-1/2 w-40 h-40 bg-purple-500 rounded-full filter blur-xl"></div>
-            <div className="absolute top-1/2 right-1/4 w-36 h-36 bg-pink-500 rounded-full filter blur-xl"></div>
-          </div>
-
-          {/* Infinite Loop Container */}
-          <div className="flex whitespace-nowrap overflow-hidden">
-            <div className="flex space-x-12 animate-marquee">
-              {logos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 h-20 w-40 flex items-center justify-center glass-card rounded-xl px-4 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-white/30 hover:border-white/50"
-                  style={{
-                    background: `linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4))`,
-                    backdropFilter: "blur(10px)",
-                  }}
-                >
+        <div className="relative w-full overflow-hidden py-4">
+          {/* Animated Logo Slider */}
+          <div className="marquee-container">
+            {[...logos, { name: "spacer", url: "" }, ...logos].map((logo, index) => (
+              <div
+                key={index}
+                className="logo-item flex-shrink-0 h-20 w-40 flex items-center justify-center rounded-xl px-4 shadow-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300"
+                style={{
+                  background: `linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4))`,
+                  backdropFilter: "blur(10px)",
+                }}
+              >
+                {logo.url && (
                   <img
                     src={logo.url}
                     alt={logo.name}
                     className="max-h-12 max-w-full object-contain transition-all duration-300 hover:scale-110"
                   />
-                </div>
-              ))}
-            </div>
-
-            {/* Clone for seamless looping */}
-            <div className="flex space-x-12 animate-marquee">
-              {logos.map((logo, index) => (
-                <div
-                  key={`clone-${index}`}
-                  className="flex-shrink-0 h-20 w-40 flex items-center justify-center glass-card rounded-xl px-4 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-white/30 hover:border-white/50"
-                  style={{
-                    background: `linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4))`,
-                    backdropFilter: "blur(10px)",
-                  }}
-                >
-                  <img
-                    src={logo.url}
-                    alt={logo.name}
-                    className="max-h-12 max-w-full object-contain transition-all duration-300 hover:scale-110"
-                  />
-                </div>
-              ))}
-            </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -78,12 +51,30 @@ const LogoSlider: React.FC<LogoSliderProps> = ({ title, logos }) => {
         {`
           @keyframes marquee {
             from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
+            to { transform: translateX(-50%); }
           }
-          .animate-marquee {
+
+          .marquee-container {
             display: flex;
-            animation: marquee 15s linear infinite;
-            min-width: max-content;
+            animation: marquee 20s linear infinite;
+            will-change: transform;
+            min-width: 200%;
+            gap: 2rem; /* Space between logos */
+          }
+
+          .logo-item {
+            flex-shrink: 0;
+            width: 160px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+          }
+
+          .logo-item:hover {
+            transform: scale(1.1);
           }
         `}
       </style>
