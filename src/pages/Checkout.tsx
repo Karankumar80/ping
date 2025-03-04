@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import SEO from '../components/SEO';
 import { ArrowLeft, CreditCard, Check, Shield, Truck, Calendar, X } from 'lucide-react';
 
 interface CheckoutState {
@@ -23,7 +23,7 @@ const Checkout = () => {
     city: '',
     state: '',
     zipCode: '',
-    country: 'India',
+    country: 'United States',
     cardNumber: '',
     cardName: '',
     expiry: '',
