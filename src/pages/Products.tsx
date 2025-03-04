@@ -56,7 +56,9 @@ const Products = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="btn btn-primary w-full hover:bg-blue-700 transition text-sm py-2 flex justify-center items-center">
+                <button className="btn btn-primary w-full hover:bg-blue-700 transition text-sm py-2 flex justify-center items-center"
+                    onClick={() => handlePreOrder(product)}
+                   >
                   Pre-order Your Trackleo
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>
