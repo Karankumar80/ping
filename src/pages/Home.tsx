@@ -569,11 +569,6 @@ const supporterLogos = [
     name: "IBM",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png"
   },
-  {
-    name: "Intel",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/1200px-Intel-logo.svg.png"
-  },
- 
 ];
 const integrations = [
   {
