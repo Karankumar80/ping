@@ -547,29 +547,30 @@ const showcaseFeatures = [
 const supporterLogos = [
   {
     name: "Google",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+    url: "assets/google_logo.png" // Adjust the path as per your actual folder structure
   },
   {
     name: "Microsoft",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png"
+    url: "assets/microsoft_logo.png"
   },
   {
     name: "Amazon",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png"
+    url: "assets/amazon_logo.png"
   },
   {
-    name: "Apple",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png"
+    name: "ZenDesk",
+    url: "assets/Zendesk-Logo.png"
   },
   {
     name: "Samsung",
-    url: "/assets/Zendesk-Logo.png"
+    url: "assets/samsung_logo.png"
   },
   {
     name: "IBM",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png"
+    url: "assets/ibm_logo.png"
   },
 ];
+
 const integrations = [
   {
     icon: <Cloud className="h-6 w-6 text-blue-600" />,
