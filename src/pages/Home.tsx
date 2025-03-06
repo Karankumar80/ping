@@ -563,7 +563,7 @@ const supporterLogos = [
   },
   {
     name: "Samsung",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1200px-Samsung_Logo.svg.png"
+    url: "/assets/Zendesk-Logo.png"
   },
   {
     name: "IBM",
