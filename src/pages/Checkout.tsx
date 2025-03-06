@@ -109,24 +109,7 @@ const Checkout = () => {
               )}
             </div>
 
-            {/* Social Links */}
-            <div className="animate-fade-in-up animation-delay-400">
-              <div className="flex justify-center space-x-6 mb-8">
-                {[
-                  { icon: <Facebook className="h-6 w-6" />, href: "#" },
-                  { icon: <Twitter className="h-6 w-6" />, href: "#" },
-                  { icon: <Instagram className="h-6 w-6" />, href: "#" },
-                  { icon: <Linkedin className="h-6 w-6" />, href: "#" }
-                ].map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="text-gray-400 hover:text-gray-600 transform hover:scale-110 transition-all"
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
+           
               <Link
                 to="/"
                 className="text-gray-500 hover:text-gray-700 transition-colors font-medium"
