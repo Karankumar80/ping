@@ -208,29 +208,23 @@ const Home = () => {
   ];
   
   const supporterLogos = [
-    {
-      name: "Google",
-      url: "assets/google_logo.png"
-    },
+   
     {
       name: "Microsoft",
-      url: "assets/microsoft_logo.png"
+      url: "assets/microsoft.png"
     },
     {
-      name: "Amazon",
-      url: "assets/amazon_logo.png"
+      name: "AWS",
+      url: "assets/aws.png"
     },
     {
       name: "ZenDesk",
       url: "assets/Zendesk-Logo.png"
     },
-    {
-      name: "Samsung",
-      url: "assets/samsung_logo.png"
-    },
+    
     {
       name: "IBM",
-      url: "assets/ibm_logo.png"
+      url: "assets/ibm.png"
     },
   ];
 
