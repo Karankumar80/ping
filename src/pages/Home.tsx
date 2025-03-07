@@ -373,7 +373,8 @@ const Home = () => {
           title="Our Trusted Partners" 
           logos={supporterLogos} 
         />
-      {/* CTA Section */}
+  return (
+  <>
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -396,8 +397,9 @@ const Home = () => {
         </div>
       </div>
     </section>
-    </div>
-  );
+  </>
+);
+
 };
 
 const deviceSpecs = [
