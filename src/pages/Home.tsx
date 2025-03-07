@@ -211,7 +211,7 @@ const Home = () => {
    
     {
       name: "Microsoft",
-      url: "assets/microsoft.png"
+      url: "assets/MicroSoftlogo.png"
     },
     {
       name: "AWS",
