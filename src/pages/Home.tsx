@@ -36,17 +36,26 @@ import {
 
 const Home = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-  const positions = ['spec-top-left', 'spec-top-right', 'spec-center-left', 'spec-center-right', 'spec-bottom-left', 'spec-bottom-right'];
-  
+  const positions = [
+    "spec-top-left",
+    "spec-top-right",
+    "spec-center-left",
+    "spec-center-right",
+    "spec-bottom-left",
+    "spec-bottom-right",
+  ];
+
   // Shuffle the positions array
   const shuffledPositions = [...positions].sort(() => Math.random() - 0.5);
-  return ()
 
+  return (
+    <>
       <SomeComponent onClose={() => setIsVideoModalOpen(false)}>
         {/* Child elements if needed */}
       </SomeComponent>
- 
-    <div className="min-h-screen">
+
+      <div className="min-h-screen"></div>
+        
       {/* Hero Section */}
       <section className="relative pt-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white/50 to-purple-50/50 backdrop-blur-3xl"></div>
