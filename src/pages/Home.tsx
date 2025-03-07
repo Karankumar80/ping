@@ -399,7 +399,7 @@ const Home = () => {
     </section>
   </>
 );
-
+};
 
 
 const deviceSpecs = [
