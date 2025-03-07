@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { ArrowRight, Facebook, Twitter, Instagram, Linkedin, Navigation, Shield, Heart } from 'lucide-react';
 
 const Checkout = () => {
@@ -22,7 +21,6 @@ const Checkout = () => {
 
   return (
     <>
-     
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -51,7 +49,7 @@ const Checkout = () => {
               <p className="text-xl md:text-2xl text-gray-600 mb-8">
                 We're crafting something extraordinary to keep you and your loved ones safe.
               </p>
-              
+
               {/* Features Preview */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div className="glass-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -109,17 +107,17 @@ const Checkout = () => {
               )}
             </div>
 
-           
-              <Link
-                to="/"
-                className="text-gray-500 hover:text-gray-700 transition-colors font-medium"
-              >
-                Return to Homepage
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+            {/* Fixing misplaced div closing */}
+            <Link
+              to="/"
+              className="text-gray-500 hover:text-gray-700 transition-colors font-medium"
+            >
+              Return to Homepage
+            </Link>
+          </div> {/* Close text-center max-w-4xl mx-auto */}
+        </div> {/* Close relative z-10 */}
+      </div> {/* Close min-h-screen */}
+
     </>
   );
 };
