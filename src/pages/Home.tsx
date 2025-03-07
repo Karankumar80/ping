@@ -40,7 +40,7 @@ const Home = () => {
   
   // Shuffle the positions array
   const shuffledPositions = [...positions].sort(() => Math.random() - 0.5);
-  return (
+  return ()
 
       <SomeComponent onClose={() => setIsVideoModalOpen(false)}>
         {/* Child elements if needed */}
