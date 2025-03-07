@@ -29,7 +29,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
           className="w-full h-full"
           autoPlay
           controls
-          src="https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smart-watch-with-health-tracking-app-48980-large.mp4"
+          src="/assets/demovideo.mp4"
         >
           Your browser does not support the video tag.
         </video>
