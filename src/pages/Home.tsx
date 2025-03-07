@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoSlider from '../components/LogoSlider';
+import VideoModal from '../components/VideoModal';
 import { 
   ArrowRight, 
   Shield, 
@@ -34,7 +35,17 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const positions = ['spec-top-left', 'spec-top-right', 'spec-center-left', 'spec-center-right', 'spec-bottom-left', 'spec-bottom-right'];
+  
+  // Shuffle the positions array
+  const shuffledPositions = [...positions].sort(() => Math.random() - 0.5);
   return (
+
+      <VideoModal 
+        isOpen={isVideoModalOpen} 
+        onClose={() => setIsVideoModalOpen(false)} 
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-20 overflow-hidden">
@@ -67,12 +78,12 @@ const Home = () => {
                   Get Trackleo
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link
-                  to="/how-it-works"
-                  className="btn btn-secondary"
-                >
-                  Watch Demo
-                </Link>
+                 <button
+                    onClick={() => setIsVideoModalOpen(true)}
+                    className="btn btn-secondary"
+                  >
+                    Watch Demo
+                  </button>
               </div>
               
             </div>
