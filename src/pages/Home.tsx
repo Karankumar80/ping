@@ -42,10 +42,10 @@ const Home = () => {
   const shuffledPositions = [...positions].sort(() => Math.random() - 0.5);
   return (
 
-      <VideoModal 
-        isOpen={isVideoModalOpen} 
-        onClose={() => setIsVideoModalOpen(false)} 
-      />
+      <SomeComponent onClose={() => setIsVideoModalOpen(false)}>
+        {/* Child elements if needed */}
+      </SomeComponent>
+ 
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-20 overflow-hidden">
