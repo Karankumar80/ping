@@ -374,31 +374,28 @@ const Home = () => {
           logos={supporterLogos} 
         />
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="glass-card rounded-3xl p-12 text-center">
-            <div className="glass-effect inline-flex items-center px-4 py-2 rounded-full mb-6">
-              <Radar className="h-5 w-5 text-green-600 mr-2" />
-              <span className="text-green-600">Always Protected</span>
-            </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Ready to Experience the Future of Safety?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied users who trust Trackleo's AI-powered protection.
-              Start your journey to enhanced safety today.
-            </p>
-            <Link
-              to="/products"
-              className="btn btn-primary"
-            >
-              Get Your Trackleo Device
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+    <section className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="glass-card rounded-3xl p-12 text-center">
+          <div className="glass-effect inline-flex items-center px-4 py-2 rounded-full mb-6">
+            <Radar className="h-5 w-5 text-green-600 mr-2" />
+            <span className="text-green-600">Always Protected</span>
           </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Ready to Experience the Future of Safety?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join thousands of satisfied users who trust Trackleo's AI-powered protection.
+            Start your journey to enhanced safety today.
+          </p>
+          <Link to="/products" className="btn btn-primary">
+            Get Your Trackleo Device
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
-      </section>
+      </div>
+    </section>
     </div>
   );
 };
