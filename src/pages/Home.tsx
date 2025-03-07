@@ -400,7 +400,7 @@ const Home = () => {
   </>
 );
 
-};
+
 
 const deviceSpecs = [
   {
