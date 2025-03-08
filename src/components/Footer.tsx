@@ -38,22 +38,42 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/trackleo.2024" className="text-gray-400 hover:text-white">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="https://x.com/Trackleo183578?t=E3nTx5ygp3kVuZD0utAzRA&s=09" className="text-gray-400 hover:text-white">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="https://www.instagram.com/track_leo?igsh=MWVhdXZzdWtxNzYzbA==" className="text-gray-400 hover:text-white">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="https://www.linkedin.com/company/trackleo/" className="text-gray-400 hover:text-white">
-                <Linkedin className="h-6 w-6" />
-              </a>
-            </div>
-          </div>
+  <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+  <div className="flex space-x-4">
+    <a 
+      href="https://www.facebook.com/trackleo.2024" 
+      className="text-gray-400 hover:text-white"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Facebook className="h-6 w-6" />
+    </a>
+    <a 
+      href="https://x.com/Trackleo183578?t=E3nTx5ygp3kVuZD0utAzRA&s=09" 
+      className="text-gray-400 hover:text-white"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Twitter className="h-6 w-6" />
+    </a>
+    <a 
+      href="https://www.instagram.com/trackleo.ai/?hl=en" 
+      className="text-gray-400 hover:text-white"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Instagram className="h-6 w-6" />
+    </a>
+    <a 
+      href="https://www.linkedin.com/company/trackleo/" 
+      className="text-gray-400 hover:text-white"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Linkedin className="h-6 w-6" />
+    </a>
+  </div>
+</div>
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
