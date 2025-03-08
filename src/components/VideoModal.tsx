@@ -95,7 +95,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ onClose }) => {
               <video
                 ref={videoRef}
                 className="w-full h-full object-cover"
-                poster="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                poster="https://trackleo.in/assets/howitswork.png"
                 src="assets/demovideo.mp4"
                 onLoadedData={handleLoadedData}
                 onError={handleError}
