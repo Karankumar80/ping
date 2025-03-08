@@ -6,8 +6,8 @@ interface VideoModalProps {
 }
 
 const VideoModal: React.FC<VideoModalProps> = ({ onClose }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true); // Initialize as true for autoplay
+  const [isMuted, setIsMuted] = useState(false); // Initialize as false for sound
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -19,6 +19,26 @@ const VideoModal: React.FC<VideoModalProps> = ({ onClose }) => {
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
   }, [onClose]);
+
+  // Add effect to autoplay video when component mounts
+  useEffect(() => {
+    if (videoRef.current && !hasError) {
+      const playPromise = videoRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch(error => {
+            console.error("Error auto-playing video:", error);
+            // Many browsers require user interaction before playing with sound
+            // So we'll set isPlaying to false if autoplay fails
+            setIsPlaying(false);
+          });
+      }
+    }
+  }, [hasError]);
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) onClose();
@@ -99,7 +119,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ onClose }) => {
                 src="assets/demovideo.mp4"
                 onLoadedData={handleLoadedData}
                 onError={handleError}
-                muted
+                muted={false} // Change to false for sound
                 playsInline
               >
                 Your browser does not support the video tag.
