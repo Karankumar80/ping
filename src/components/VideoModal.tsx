@@ -96,7 +96,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ onClose }) => {
                 ref={videoRef}
                 className="w-full h-full object-cover"
                 poster="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
-                src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                src="assets/demovideo.mp4"
                 onLoadedData={handleLoadedData}
                 onError={handleError}
                 muted
