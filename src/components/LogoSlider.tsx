@@ -97,7 +97,7 @@ const LogoSlider: React.FC<LogoSliderProps> = ({ title, logos }) => {
           }
 
           .animate-marquee {
-            animation: marquee 30s linear infinite;
+            animation: marquee 14s linear infinite;
             display: flex;
             width: max-content;
           }
