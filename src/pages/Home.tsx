@@ -494,7 +494,7 @@ const Home = () => {
 
         {/* Our Supporters Section */}
         <LogoSlider 
-          title="We Are Backed By" 
+          title="Our Promoters" 
           logos={supporterLogos} 
         />
 
